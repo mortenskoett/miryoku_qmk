@@ -1,0 +1,8 @@
+build-ergotravel:
+	qmk compile -kb ergotravel/rev1 -km manna-harbour_miryoku
+
+flash-ergotravel: build-ergotravel
+	qmk flash -kb ergotravel/rev1 -km manna-harbour_miryoku --bootloader dfu
+
+clean:
+	rm -rf .build
